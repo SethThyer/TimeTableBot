@@ -1,3 +1,5 @@
+require('dotenv').config();
+const token = process.env.TOKEN;
 const Discord = require('discord.js');
 const APIres = require('./FetchAPI')
 const Day = require('./DateCalc');
@@ -25,7 +27,7 @@ client.on('message', async message => {
 
     if (command === 'tomorrow') {
         message.channel.send(Day.dayWeekNext)
-        return
+        return;
     }
 
     // ----------------------------------------COMMANDS DEBUG----------------------------------------
@@ -38,4 +40,4 @@ client.on('message', async message => {
     }
 });
 
-client.login('ODU0MjcxMDM5MjY1OTY0MDMy.YMhf5w.ezD9UHCYS-jc_jpxgpveUuIkdiE')
+client.login(token);
