@@ -1,0 +1,23 @@
+{
+  "name": "timetablebot",
+  "version": "1.0.0",
+  "description": "Show's School TimeTable",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SethThyer/TimeTableDiscordBot.git"
+  },
+  "author": "SethThyer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SethThyer/TimeTableDiscordBot/issues"
+  },
+  "homepage": "https://github.com/SethThyer/TimeTableDiscordBot#readme",
+  "dependencies": {
+    "discord.js": "^12.5.3",
+    "nodemon": "^2.0.11"
+  }
+}
