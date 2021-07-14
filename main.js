@@ -5,7 +5,7 @@ const APIres = require('./FetchAPI')
 const Day = require('./DateCalc');
 const client = new Discord.Client();
 
-const prefix = '()'
+const prefix = '()';
 
 client.once('ready', () => {
     console.log('ONLINE');
