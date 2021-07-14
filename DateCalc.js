@@ -39,8 +39,14 @@ let weekSchool = 0;
 if (weekNumber % 2 === 0) weekSchool = 2;
 else weekSchool = 1;
 
-currentDay = Days[new Date().getDay()];
-nextDay = Days[new Date().getDay() + 1];
+let currentDay = Days[new Date().getDay()];
+let nextDay = Days[new Date().getDay() + 1];
+
+let weeSchoolNext = weekSchool;
+if (nextDay == 'Monday') {
+    if (weekSchool = 1) weeSchoolNext = 2;
+    else weeSchoolNext = 1;
+}
 
 const dayInfo = {
     day: dayNumber,
@@ -48,7 +54,8 @@ const dayInfo = {
     dayWeekNext: nextDay,
     week: weekNumber,
     months: MonthDays,
-    schoolWeek: weekSchool
+    schoolWeek: weekSchool,
+    schoolWeekNext: weeSchoolNext
 };
 
 module.exports = dayInfo;

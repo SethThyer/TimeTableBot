@@ -17,7 +17,6 @@ client.on('message', async message => {
     const args = message.content.slice(prefix.length).split(/ +/);
     const command = args.shift().toLocaleLowerCase();
 
-    // ----------------------------------------COMMANDS BEGIN----------------------------------------
 
     if (command === 'today') {
         const getData = await APIres.execute(Day.dayWeek, Day.schoolWeek);
@@ -26,16 +25,8 @@ client.on('message', async message => {
     }
 
     if (command === 'tomorrow') {
-        message.channel.send(Day.dayWeekNext)
-        return;
-    }
-
-    // ----------------------------------------COMMANDS DEBUG----------------------------------------
-
-    if (message.author.id !== '411456780628000769') return;
-    if (command === 'debug:count'){
-        const getData = await APIres.execute();
-        message.channel.send(getData);
+        const getData = await APIres.execute(Day.dayWeekNext, Day.schoolWeekNext);
+        message.channel.send(getData)
         return;
     }
 });
